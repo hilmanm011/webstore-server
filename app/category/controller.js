@@ -11,14 +11,16 @@ module.exports ={
             }
 
             const category = await Category.find()
-
+            console.log(category);
             res.render('admin/category/view_category',{
                 category,
                 alert,
                 name: req.session.user.name,
                 title: 'Halaman Kategori'
             })
+
         } catch (error) {
+            console.log(err);
             req.flash('alertMessage', `${err.message}`)
             req.flash('alertStatus', `danger`)
             res.redirect('/category')
