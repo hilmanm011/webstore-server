@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "env-cmd -f ./.env nodemon ./bin/www",
-    "pro": "nodemon ./bin/www"
+    "dev" : "nodemon ./bin/www",
+    "pro": "./bin/www"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,7 +23,9 @@
     "method-override": "^3.0.0",
     "mongoose": "^6.7.3",
     "morgan": "~1.9.1",
-    "multer": "^1.4.5-lts.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.20"
   }
 }
